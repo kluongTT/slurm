@@ -1,5 +1,6 @@
+TEMPLATE ?= ubuntu-22.04
 lima-up:
-	limactl create --name=slurm-single-node -y template://ubuntu-22.04
+	limactl create --name=slurm-single-node -y template://$(TEMPLATE)
 	limactl start slurm-single-node
 	limactl shell slurm-single-node ./setup_single_queue.sh
 
