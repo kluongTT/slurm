@@ -1,7 +1,7 @@
 lima-up:
 	limactl create --name=slurm-single-node -y template://ubuntu-22.04
 	limactl start slurm-single-node
-	limactl shell slurm-single-node ./setup_single_card.sh
+	limactl shell slurm-single-node ./setup_single_queue.sh
 
 lima-down:
 	limactl stop slurm-single-node || limactl delete slurm-single-node
