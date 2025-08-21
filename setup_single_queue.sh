@@ -63,3 +63,10 @@ sudo systemctl start slurmd
 # Set the machine as idle
 # TODO: this might not be needed at all
 # sudo scontrol update nodename=localhost state=idle
+
+echo "Running slurm commands to verify setup"
+set +x
+
+sinfo
+squeue
+srun echo "Hello from Slurm!"
